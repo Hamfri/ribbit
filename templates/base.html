@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+{% load less %}
+{% load static %}
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet/less" type="text/css" href="{% static 'style.less' %}">
+	<link rel="stylesheet/less"  href="{{ STATIC_URL }}style.less">
 </head>
 <body>
 <header>
 	<div class="wrapper">
-		<img src="{% static 'gfx/logo.png'%}">
+		<img src="{{ STATIC_URL }}gfx/logo.png"> <!--Here we use the less template tags-->
 		<span>Twitter Clone</span>
 		{% block login %}
 		<a href="/">Home</a>
@@ -15,7 +17,7 @@
 		<a href="/users/{{ username }}">My Profiles</a>
 		<a href="/ribbits">Public Ribbits</a>
 		<form action="/logout/">
-			<input type="submit" id="btnLogOut" value="L"/>
+			<input type="submit" id="btnLogOut" value="Logout"/>
 		</form>
 		{% endblock %}
 	</div>

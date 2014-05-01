@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'ribbit_app',
     'south',
+    'less',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
