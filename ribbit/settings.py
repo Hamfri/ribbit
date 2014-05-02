@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'ribbit_app',
     'south',
     'less',
+    'django_gravatar',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

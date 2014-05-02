@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load less%}
+{% load gravatar %}
 {% block login %}
     {% with user.username as username %}
          {{ block.super }}
@@ -24,7 +25,7 @@
    	   {% for ribbit in ribbits %}
    	   <div class="ribbitWrapper">
    	   	<a href="/users/{{ ribbit.user.username }}">
-   	   		<img class="avatar" src="{{ ribbit.user.profile.gravatar_url }}">
+   	   		<img class="gravatar" src="{{ ribbit.user.profile.gravatar_url }}">
    	   		<span class="name">{{ ribbit.user.first_name }}</span>
    	   	</a>
    	   	@{{ ribbit.user.username }}
