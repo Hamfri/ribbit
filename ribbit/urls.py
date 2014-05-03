@@ -20,5 +20,8 @@ urlpatterns = patterns('',
     url(r'^signup$', views.signup, name='signup'),
     url(r'^ribbits$', views.public, name='public'),
     url(r'^submit$', views.submit, name='submit'),
+    url(r'^users/$', views.users, name='users'),
+    url(r'^users/(?P<username>\w{0,30})/$', views.users, name='users'),
+    url(r'^follow$', views.follow, name='follow'),
     url(r'^admin/', include(admin.site.urls)),
 )
